@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation page </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="doc">
+        <nav id="navbar">
+            <header>Responsive Design</header>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#Introduction_to_Responsive_Design">Introduction to Responsive Design</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Core_Principles">Core Principles</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Fluid_Grid_Layouts">Fluid Grid Layouts</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Flexible_Images_and_Media">Flexible Images and Media</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Typography">
+                        Typography
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Flexbox">Flexbox</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#CSS_Grid">CSS Grid</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Media_Queries">Media Queries</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Best_Practices">
+                        Best Practices
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#The_Take_Away">
+                        The Take Away
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Reference">
+                        Reference
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction_to_Responsive_Design">
+                <header>Introduction to Responsive Design</header>
+                <p> “Responsive design” refers to the idea that your website should display equally well in everything
+                    from
+                    widescreen monitors to mobile phones. It’s an approach to web design and development that eliminates
+                    the
+                    distinction between the mobile-friendly version of your website and its desktop counterpart. With
+                    responsive design, they’re the same thing.</p>
+                <p>Responsive design is accomplished through CSS “media queries”. Think of media queries as a way to
+                    conditionally apply CSS rules. They tell the browser that it should ignore or apply certain rules
+                    depending on the user’s device.</p>
+                <h4>Responsive VS Adaptive design </h4>
+                <p>Responsive and adaptive web design are two different approaches to designing websites for multiple
+                    devices. They share a common goal of providing a better UX across different screen sizes, but they
+                    use
+                    different techniques to achieve that goal.</p>
+                <p>Responsive web design relies on fluid grids, flexible images, and CSS media queries using a single
+                    codebase, so the changes made to the website apply across all devices. On the other hand, adaptive
+                    web
+                    design employs multiple layouts served by a detected device and requires creating and maintaining
+                    numerous website versions. </p>
+            </section>
+
+            <section class="main-section" id="Core_Principles">
+                <header>Core Principles</header>
+
+                <ul>
+                    <li> Fluid Grid Layouts <p>A fluid grid layout is at the heart of responsive web design. Instead of
+                            fixed pixel measurements,
+                            designers use relative units such as percentages or ems to create flexible grids. Elements
+                            within
+                            these grids adjust proportionally, ensuring that the layout adapts smoothly to different
+                            screen
+                            sizes.</p>
+                    </li>
+
+
+                    <li>Flexible Images and Media<p>Images and media elements are key contributors to a website’s visual
+                            appeal. Responsive web design
+                            involves using CSS techniques to ensure that images and media scale proportionally while
+                            maintaining
+                            their aspect ratio. This prevents distortion and ensures that visual content looks crisp
+                            across
+                            devices.</p>
+                    </li>
+
+                    <li> Media Queries <p> Media queries enable designers to apply different styles based on the
+                            characteristics of the user’s device, such as screen width, height, and orientation. By
+                            using
+                            media queries, designers can create breakpoints at which the design adjusts to provide an
+                            optimal user experience.</p>
+                    </li>
+
+                    <li> Mobile-First Design
+                        <p> The mobile-first approach is a design strategy where the initial design is crafted for
+                            mobile
+                            devices and then progressively enhanced for larger screens. This approach ensures that the
+                            core
+                            content and functionality are prioritized for smaller screens, promoting a user-centric
+                            design
+                            philosophy.</p>
+                    </li>
+                    <li>Content Prioritization
+                        <p> Responsive web design involves making strategic decisions about content prioritization.
+                            Designers must determine which content elements are essential for all screen sizes and which
+                            can
+                            be progressively enhanced for larger screens without compromising user experience.</p>
+                    </li>
+                    <li>Performance Optimization
+                        <p> Responsive web design requires optimizing performance to ensure fast loading times across
+                            devices.
+                            Techniques such as lazy loading images, minifying code, and reducing server requests
+                            contribute
+                            to
+                            an efficient and responsive website.</p>
+                    </li>
+                    <li> Cross-Browser Compatibility
+                        <p> Responsive web design extends beyond different devices to various browsers. Designers
+                            conduct
+                            thorough testing to ensure that the design functions as intended across different browsers
+                            and
+                            browser versions.</p>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section class="main-section" id="Fluid_Grid_Layouts">
+                <header>Fluid Grid Layouts</header>
+                <p>- Fluid grids allow for a flexible and proportional layout by using relative units (%, em, rem)
+                    instead
+                    of absolute units (px).
+                </p>
+                <p> <b>Advantages:</b> Maintains layout consistency across different devices and screen sizes.</p>
+
+                <p>example</p>
+
+                <code>
+                .container {
+                  width: 80%;
+                  max-width: 1200px;
+                  margin: 0 auto;
+                }
+                
+                .column {
+                  float: left;
+                  width: 50%;
+                }
+                
+                @media (max-width: 768px) {
+                  .column {
+                    width: 100%;
+                  }
+                }
+                </code>
+                <p>Explanation: In the example, the .container is set to 80% of the viewport width with a maximum width
+                    of
+                    1200px. The .column class is set to 50% width, but it adjusts to 100% on screens smaller than 768px.
+                </p>
+            </section>
+
+            <section class="main-section" id="Flexible_Images_and_Media">
+                <header>Flexible Images and Media</header>
+                <p>Explanation: Ensuring that images and media elements (videos, iframes) scale and remain within the
+                    bounds
+                    of their container.</p>
+                <ul>
+                    <li>Using max-width: 100%: Ensures the image or media does not exceed the width of its container.
+                    </li>
+                    <li>Height Auto: Maintains the aspect ratio.</li>
+                </ul>
+                <p>example</p>
+                <code>
+                img, video, iframe {
+                    max-width: 100%;
+                    height: auto;
+                  }
+                  
+            </code>
+                <p>Explanation: This CSS ensures that all images, videos, and iframes are responsive and fit within
+                    their
+                    container's width while maintaining their aspect ratio.</p>
+
+
+            </section>
+            <section class="main-section" id="Typography">
+                <header>Typography</header>
+                <p>Readability should be adjusted for various device sizes and layouts. Font size is an obvious
+                    consideration, but there are also other factors that contribute to creating easily digestible
+                    content.
+                </p>
+                <p>Regarding size, desktop design should display larger fonts that can be comfortably read from an
+                    arms-width away. Mobile fonts should be smaller, since users will naturally hold the device closer
+                    to
+                    their face. Font size should be such that horizontal scrolling or zooming is unnecessary.</p>
+
+
+            </section>
+
+
+            <section class="main-section" id="Flexbox">
+                <header>Flexbox</header>
+                <p>In flexbox, flex items shrink or grow, distributing space between the items according to the space in
+                    their container. By changing the values for flex-grow and flex-shrink you can indicate how you want
+                    the
+                    items to behave when they encounter more or less space around them.</p>
+
+                <p>In the example below the flex items will each take an equal amount of space in the flex container,
+                    using
+                    the shorthand of flex: 1 as described in the layout topic</p>
+                <code>
+                .container {
+                    display: flex;
+                  }
+                  
+                  .item {
+                    flex: 1;
+                  } 
+            </code>
+
+            </section>
+            <section class="main-section" id="CSS_Grid">
+                <header>CSS Grid</header>
+                <p>In CSS grid layout the fr unit allows the distribution of available space across grid tracks. The
+                    next
+                    example creates a grid container with three tracks sized at 1fr. This will create three column
+                    tracks,
+                    each taking one part of the available space in the container.</p>
+
+                <p>You can also use Grid Layout to create regular grid layouts with as many items as can fit. The number
+                    of
+                    available tracks is reduced as the screen size decreases. </p>
+                <code>
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                  }
+            </code>
+
+            </section>
+
+
+            <section class="main-section" id="Media_Queries">
+                <header>Media Queries</header>
+
+                <p>Explanation: Media queries are CSS techniques used to apply styles conditionally based on the
+                    characteristics of the device.</p>
+                <h4>Common Media Queries</h4>
+                <ul>
+                    <li>Max-Width Query: For styles applying to devices with a width less than a specified value
+                        <code>@media (max-width: 768px) {
+                        /* Styles for devices = 768px */
+                      }
+                      </code>
+                    </li>
+                    <li>Min-Width Query: For styles applying to devices with a width greater than a specified value.
+                        <code>@media (min-width: 1024px) {
+                        /* Styles for devices >= 1024px */
+                      }
+                      </code>
+                    </li>
+                    <li>Orientation Query: To target portrait or landscape orientations.</li>
+                </ul>
+
+                <code>@media (max-width: 600px) {
+                .navbar {
+                  display: none;
+                }
+              }
+              
+              @media (min-width: 601px) {
+                .navbar {
+                  display: block;
+                }
+              }
+              </code>
+                <p>Explanation: In the example, the .navbar class is hidden on devices with a screen width of 600px or
+                    less
+                    and shown on wider screens</p>
+            </section>
+
+            <section class="main-section" id="Best_Practices">
+                <header>Best Practices</header>
+
+                <ol>
+                    <li>Mobile-First Approach: Start by designing for the smallest screen size and progressively enhance
+                        for
+                        larger screens.</li>
+                    <li>Viewport Meta Tag: Ensures proper scaling and rendering on mobile devices. </li>
+                    <code>
+                      //  meta name="viewport" content="width=device-width, initial-scale=1"///</code>
+
+                    <li>Avoid Fixed Positioning: Can cause layout issues on smaller screens; use relative or absolute
+                        positioning with caution.</li>
+                    <li>Consistent Design Language: Maintain visual consistency across different devices to provide a
+                        seamless experience.</li>
+                </ol>
+            </section>
+            <section class="main-section" id="The_Take_Away">
+                <header>The Take Away</header>
+
+                <p>Responsive design is the default approach in web design. It is crucial for accessible and
+                    search-engine-optimized experiences. To create responsive designs, UX designers work with fluid
+                    grids
+                    and images. You must work closely with developers to specify breakpoints and test if they render
+                    correctly. </p>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+
+                <p>all the documentation are from <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">MDN</a> ,
+                    <a
+                        href="https://www.interaction-design.org/literature/topics/responsive-design?srsltid=AfmBOoo60WRkMQfxVq4L2XNHyP-qxkUmNfIC1EB6QJXvAqlVVmP3LAaj">Interactive
+                        Design</a>, etc
+                </p>
+            </section>
+
+
+        </main>
+    </div>
+    <div class="span"></div>
+    <footer>
+        <p>&copy; 2024 created by muni.FreeCodeCamp.</p>
+
+    </footer>
+
+</body>
+
+</html>
